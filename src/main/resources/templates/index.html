@@ -4,29 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/custom/css/default.css" rel="stylesheet">
-    <link href="/custom/css/sidebars.css" rel="stylesheet">
+    <link th:href="@{/custom/css/default.css}" rel="stylesheet">
+    <link th:href="@{/custom/css/sidebars.css}" rel="stylesheet">
 </head>
 <body>
-    
-<main class="d-flex flex-nowrap">
 
 <!-- Sidebar -->
-<div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
-  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+<div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar" style="width: 280px;">
+  <a th:href="@{/}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
       <!--
       <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
       -->
-      <img src="/assets/route66.png" alt="" width="32" height="32" >
+      <img th:src="@{/assets/route66.png}" alt="" width="32" height="32" >
       <span class="fs-4"> ICE As A Service</span>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="/" class="nav-link active" aria-current="page">
+        <a th:href="@{/}" class="nav-link active" aria-current="page">
           Home
         </a>
       </li>
@@ -36,41 +34,37 @@
         </a>
       </li>
       <li>
-        <a href="/form" class="nav-link text-white">
+        <a th:href="@{/form}" class="nav-link text-white">
           Cadastrar
         </a>
       </li>
       <li>
-        <a href="/consultar" class="nav-link text-white">
+        <a th:href="@{/consultar}" class="nav-link text-white">
           Consultar
         </a>
       </li>
       <li>
-        <a href="/about" class="nav-link text-white">
+        <a th:href="@{/about}" class="nav-link text-white">
           Sobre
         </a>
       </li>
     </ul>
     <hr>
     <div class="dropdown">
-      <a href="/login" class="d-flex align-items-center text-white text-decoration-none" aria-expanded="false">
+      <a th:href="@{/login}" class="d-flex align-items-center text-white text-decoration-none" aria-expanded="false">
         <strong>Login</strong>
       </a>
   </div>
 
 </div>
 
-<!--<div class="d-flex p-3">
 
-<div th:replace="fragments/sidebar :: breadcrumb">
-</div>
--->
-
+<main class="d-flex flex-nowrap" style="padding-left: 280px;">
 
 <div class="col p-3 text-center">
   <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
       <li class="breadcrumb-item active" aria-current="page">Teste</li>
     </ol>
   </nav>
@@ -90,8 +84,8 @@
 </main>
 
 
-    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
 
-      <script src="/custom/js/sidebars.js"></script>
+      <script th:src="@{/custom/js/sidebars.js}"></script>
   </body>
 </html>

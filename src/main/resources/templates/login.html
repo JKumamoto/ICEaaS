@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
 
-<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
 
-    <link href="/custom/css/default.css" rel="stylesheet">
+    <link th:href="@{/custom/css/default.css}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <style>
@@ -52,7 +52,7 @@
 
 <main class="form-signin w-100 m-auto">
   <form>
-    <img class="mb-4" src="/assets/route66.png" alt="" width="72" height="57">
+    <img class="mb-4" th:src="@{/assets/route66.png}" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">

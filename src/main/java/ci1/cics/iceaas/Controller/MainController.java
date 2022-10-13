@@ -30,6 +30,11 @@ public class MainController {
         return "consultar";
     }
 
+    @GetMapping("/error")
+    public String erro(){
+        return "error";
+    }
+
     @GetMapping("/form")
     public String form(){
         return "form";
